@@ -22,7 +22,7 @@ const Gallery = () => {
     backgroundImage: `url(${lane})`,
     backgroundSize: "cover",
   }}
-  className="mt-[50px]"
+  className="flex-col md:flex-row mt-[50px]"
 >
   <motion.p
     initial={{ y: -80, opacity: 0 }}
@@ -45,7 +45,7 @@ const Gallery = () => {
   </motion.p>
 </div>
 
-        <div className='flex gap-[10px] items-center justify-center mt-[30px]'>
+        <div className='flex-col md:flex-row flex gap-[10px] items-center justify-center mt-[30px]'>
 
   <div className='relative group overflow-hidden'>
     <img
@@ -73,7 +73,7 @@ const Gallery = () => {
 
 </div>
 
-       <div className='flex gap-[10px] items-center justify-center mt-[10px]'>
+       <div className='flex-col md:flex-row flex gap-[10px] items-center justify-center mt-[10px]'>
 
   <div className='relative group overflow-hidden'>
     <img
@@ -101,7 +101,7 @@ const Gallery = () => {
 
 </div>
 
-       <div className='flex gap-[10px] items-center justify-center mt-[10px]'>
+       <div className='flex-col md:flex-row flex gap-[10px] items-center justify-center mt-[10px]'>
 
   <div className='relative group overflow-hidden'>
     <img
@@ -129,7 +129,7 @@ const Gallery = () => {
 
 </div>
 
-      <div className='flex gap-[10px] items-center justify-center mt-[10px]'>
+      <div className='flex-col md:flex-row flex gap-[10px] items-center justify-center mt-[10px]'>
 
   <div className='relative group overflow-hidden'>
     <img
@@ -157,7 +157,7 @@ const Gallery = () => {
 
 </div>
 
-    <div>
+    <div className='items-center'>
       <img src={Teeth}  className='w-[450px] mt-[10px] mb-[60px]'/>
     </div>
      

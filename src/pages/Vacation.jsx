@@ -18,7 +18,7 @@ const Vacation = () => {
            <div style={{
            backgroundImage: `url(${trip})`,
            backgroundSize: "cover",}}
-         className="mt-[50px]">
+         className="flex-col md:flex-row mt-[50px]">
          <motion.p
            initial={{ opacity: 0, y: -50 }}
            whileInView={{ opacity: 1, y: 0 }}
@@ -40,62 +40,93 @@ const Vacation = () => {
          </motion.p>
        </div>
        
-              <div className='flex gap-[120px]'>
-            
-                      <div>
-            
-                    <img src={trip} className='w-[730px] rounded-[8px] mt-[60px] ml-[70px]'/>
-            
-                      <p className='ml-[30px] font-bold text-[40px] mt-[20px] text-purple-700'>Vacation Packages</p>
-            
-                        <p className='ml-[30px] mt-[20px] text-[15px]'>
-                       Escape to your dream destination with Macwise Travels exclusive vacation packages! Whether<br/>
-                       you’re craving a relaxing beach retreat, an exciting adventure, or a cultural exploration, we acurate the<br/>
-                       perfect getaway tailored to your preferences. Our all-inclusive packages cover flights,<br/>
-                       accommodations, guided tours, and unique experiences, ensuring a seamless and unforgettable<br/>
-                       journey.</p>
-                            
-                            <p className='ml-[30px] mt-[30px] text-[15px]'>
-                          Choosing us means enjoying expertly planned itineraries, competitive pricing, and hassle-free<br/>
-                          bookings. We partner with top hotels, airlines, and tour operators to provide you with the best deals<br/>
-                          and experiences. Our dedicated team takes care of every detail, allowing you to relax and enjoy your<br/>
-                          trip without stress.</p>
-       
-                         <p className='mt-[30px] ml-[30px] text-[15px]'>
-                           Let Tranquilane Travels turn your travel dreams into reality! Whether you’re planning a solo trip,a<br/>
-                           family vacation, or a romantic getaway, we guarantee a smooth and memorable experience. Fill out<br/>
-                           our consultation form below, and let’s start planning your perfect vacation! 🌍✨</p>
-                       </div>
-            
-                    <div className='mt-[60px]'>
-                         
-                  <form style={{backgroundColor : "#FF61370D"}} className=' h-[650px] rounded-[8px] p-[50px] mr-[150px]'>
-       
-                       <p className='pl-[40px] pt-[20px] text-[30px] font-bold'>Contact Us</p>
-            
-                        <div className='flex gap-[10px] pt-[20px] pl-[40px]'>
-                            <CiLocationOn className='w-[20px] h-[20px] text-orange-400 mt-[10px]'/>
-                            <p>
-                                Block A, Shop 1, 3rd Avenue<br/>
-                              Cornershop, Gwarimpa, Abuja, Nigeria</p>
-                        </div>
-            
-                        <div className='flex gap-[10px] pt-[20px] pl-[40px]'>
-                            <MdOutlineEmail className='w-[20px] h-[20px] text-orange-400'/>
-                            <p className='cursor-pointer'>Macwiseltd@gmail.com</p>
-                        </div>
-            
-                         <div className='flex gap-[10px] pl-[40px] pt-[20px]'>
-                            <FaPhoneAlt className='w-[20px] h-[20px] text-orange-400'/>
-                            <p>+2349130593550</p>
-                         </div>
-            
-                       <img src= {lady} className='w-[300px] rounded-[7px] mt-[40px] ml-[10px] mb-[70px]'/>
-             
-                     </form>
-                    </div>
-            
-                   </div>
+              <div className="flex flex-col lg:flex-row gap-[40px] lg:gap-[120px]">
+
+  <div>
+
+    <img
+      src={trip}
+      className="w-full lg:w-[730px] rounded-[8px] mt-[60px] px-[20px] lg:px-0 lg:ml-[70px]"
+    />
+
+    <p className="ml-[20px] lg:ml-[30px] font-bold text-[28px] md:text-[35px] lg:text-[40px] mt-[20px] text-purple-700">
+      Vacation Packages
+    </p>
+
+    <p className="ml-[20px] lg:ml-[30px] mt-[20px] text-[14px] md:text-[15px] pr-[20px]">
+      Escape to your dream destination with Macwise Travels exclusive vacation packages! Whether
+      <br className="hidden lg:block" />
+      you’re craving a relaxing beach retreat, an exciting adventure, or a cultural exploration, we acurate the
+      <br className="hidden lg:block" />
+      perfect getaway tailored to your preferences. Our all-inclusive packages cover flights,
+      <br className="hidden lg:block" />
+      accommodations, guided tours, and unique experiences, ensuring a seamless and unforgettable
+      <br className="hidden lg:block" />
+      journey.
+    </p>
+
+    <p className="ml-[20px] lg:ml-[30px] mt-[30px] text-[14px] md:text-[15px] pr-[20px]">
+      Choosing us means enjoying expertly planned itineraries, competitive pricing, and hassle-free
+      <br className="hidden lg:block" />
+      bookings. We partner with top hotels, airlines, and tour operators to provide you with the best deals
+      <br className="hidden lg:block" />
+      and experiences. Our dedicated team takes care of every detail, allowing you to relax and enjoy your
+      <br className="hidden lg:block" />
+      trip without stress.
+    </p>
+
+    <p className="mt-[30px] ml-[20px] lg:ml-[30px] pr-[20px] text-[14px] md:text-[15px]">
+      Let Tranquilane Travels turn your travel dreams into reality! Whether you’re planning a solo trip, a
+      <br className="hidden lg:block" />
+      family vacation, or a romantic getaway, we guarantee a smooth and memorable experience. Fill out
+      <br className="hidden lg:block" />
+      our consultation form below, and let’s start planning your perfect vacation! 🌍✨
+    </p>
+
+  </div>
+
+  <div className="mt-[60px] px-[20px] lg:px-0">
+
+    <form
+      style={{ backgroundColor: "#FF61370D" }}
+      className="w-full lg:w-auto min-h-[650px] rounded-[8px] p-[30px] md:p-[50px] lg:mr-[150px]"
+    >
+
+      <p className="pl-[10px] md:pl-[40px] pt-[20px] text-[24px] md:text-[30px] font-bold">
+        Contact Us
+      </p>
+
+      <div className="flex gap-[10px] pt-[20px] pl-[10px] md:pl-[40px]">
+        <CiLocationOn className="w-[20px] h-[20px] text-orange-400 mt-[10px] flex-shrink-0" />
+        <p>
+          Block A, Shop 1, 3rd Avenue
+          <br />
+          Cornershop, Gwarimpa, Abuja, Nigeria
+        </p>
+      </div>
+
+      <div className="flex gap-[10px] pt-[20px] pl-[10px] md:pl-[40px]">
+        <MdOutlineEmail className="w-[20px] h-[20px] text-orange-400 flex-shrink-0" />
+        <p className="cursor-pointer break-all">
+          Macwiseltd@gmail.com
+        </p>
+      </div>
+
+      <div className="flex gap-[10px] pl-[10px] md:pl-[40px] pt-[20px]">
+        <FaPhoneAlt className="w-[20px] h-[20px] text-orange-400 flex-shrink-0" />
+        <p>+2349130593550</p>
+      </div>
+
+      <img
+        src={lady}
+        className="w-full max-w-[300px] rounded-[7px] mt-[40px] mx-auto mb-[70px]"
+      />
+
+    </form>
+
+  </div>
+
+</div>
                
                   
                   <div className=" min-h-screen flex px-4 py-10 mt-[40px] ml-[30px] mb-[70px]">

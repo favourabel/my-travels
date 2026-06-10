@@ -18,7 +18,7 @@ const News = () => {
     backgroundImage: `url(${lane})`,
     backgroundSize: "cover",
   }}
-  className="mt-[50px]"
+  className="flex-col md:flex-row mt-[50px]"
 >
   <motion.div
     initial={{ y: -80, opacity: 0 }}
@@ -37,7 +37,7 @@ const News = () => {
 </div>
 
         
-           <div>
+           <div className='flex-col md:flex-row'>
        
                <div>
                  <p className='text-center mt-[90px] text-[17px] text-purple-700'>OUR BLOGS</p>
@@ -49,7 +49,7 @@ const News = () => {
                               Get the best tips and offers for your next journey! ✈️🌍</p>
                </div>
        
-                  <div className='flex gap-[30px]'>
+                  <div className='flex-col md:flex-row flex gap-[30px]'>
        
                 <div className='mt-[70px]'>
        

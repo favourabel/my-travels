@@ -48,8 +48,7 @@ const App = () => {
   transition={{
     duration: 1,
     ease: "easeOut",
-  }}
->
+  }} className='flex-col md:flex-row'>
   <motion.p
     className="text-[25px] pt-[10%] mt-[40px] ml-[40px] font-bold text-white"
     initial={{ opacity: 0, y: 80 }}
@@ -91,13 +90,13 @@ const App = () => {
 </motion.button>
 </motion.div>
 
-    <div className='mb-[14%]'>
+  <div className='mb-[14%] px-[20px] md:px-[40px]'>
 
-  <div className="flex items-center gap-[13%]">
+  <div className="flex flex-col md:flex-row items-center gap-[50px] md:gap-[13%]">
 
     {/* Images Section (LEFT ANIMATION) */}
     <motion.div
-      className="relative w-[600px] h-[600px] flex-shrink-0 mt-[7%]"
+      className="relative w-full max-w-[600px] h-[350px] md:h-[600px] flex-shrink-0 mt-[7%]"
       initial={{ opacity: 0, x: -120 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.9, ease: "easeOut" }}
@@ -105,19 +104,19 @@ const App = () => {
 
       <img
         src={agent}
-        className="absolute top-5 left-5 w-[450px] rounded-xl"
+        className="absolute top-5 left-0 md:left-5 w-[280px] sm:w-[350px] md:w-[450px] rounded-xl"
         alt=""
       />
 
       <img
         src={moon}
-        className="absolute top-0 right-20 left-130 w-28 ml-[60px]"
+        className="absolute top-0 right-5 md:right-20 w-[70px] md:w-28 hidden md:block"
         alt=""
       />
 
       <img
         src={lady}
-        className="absolute bottom-1 top-90 right-2 left-100 w-[350px] rounded-xl z-10"
+        className="absolute bottom-0 right-0 md:right-2 w-[180px] sm:w-[250px] md:w-[350px] rounded-xl z-10 hidden md:block"
         alt=""
       />
 
@@ -125,51 +124,59 @@ const App = () => {
 
     {/* Text Section (RIGHT ANIMATION) */}
     <motion.div
-      className=''
+      className='w-full text-center md:text-left'
       initial={{ opacity: 0, x: 120 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.9, ease: "easeOut" }}
     >
 
-      <p className="text-purple-700 mt-[6%]">About Us</p>
+      <p className="text-purple-700 mt-[6%]">
+        About Us
+      </p>
 
-      <p className="text-[40px] font-bold">
-        Expert travel management<br/>
-        for seamless, high-quality<br/>
+      <p className="text-[30px] sm:text-[35px] md:text-[40px] font-bold leading-tight">
+        Expert travel management
+        <br className="hidden md:block" />
+        for seamless, high-quality
+        <br className="hidden md:block" />
         experiences.
       </p>
 
-      <p className='pt-[60px] text-[17px]'>
-        Founded in 2020 and incorporated in 2022, we provide expert travel<br/>
-        management services to NGOs, government agencies, corporations,and<br/>
+      <p className='pt-[30px] md:pt-[60px] text-[16px] md:text-[17px] leading-relaxed'>
+        Founded in 2020 and incorporated in 2022, we provide expert travel
+        <br className="hidden md:block" />
+        management services to NGOs, government agencies, corporations,and
+        <br className="hidden md:block" />
         individuals.
       </p>
 
-      <div className='flex pt-[20px] gap-[10px] mt-[60px]'>
-        <IoCheckmark className='text-purple-700 w-[30px] h-[30px] pt-[10px]'/>
-        <p className='text-[18px] pt-[10px]'>
+      <div className='flex items-start md:items-center justify-center md:justify-start pt-[20px] gap-[10px] mt-[30px] md:mt-[60px] text-left'>
+        <IoCheckmark className='text-purple-700 w-[30px] h-[30px] flex-shrink-0 pt-[5px]'/>
+        <p className='text-[16px] md:text-[18px]'>
           Hassle-free bookings with expert travel support.
         </p>
       </div>
 
-      <div className='flex pt-[20px] gap-[10px] mt-[10px]'>
-        <IoCheckmark className='text-purple-700 w-[30px] h-[30px] pt-[10px]'/>
-        <p className='text-[18px] pt-[10px]'>
+      <div className='flex items-start md:items-center justify-center md:justify-start pt-[20px] gap-[10px] mt-[10px] text-left'>
+        <IoCheckmark className='text-purple-700 w-[30px] h-[30px] flex-shrink-0 pt-[5px]'/>
+        <p className='text-[16px] md:text-[18px]'>
           Tailored travel solutions for every need.
         </p>
       </div>
 
-      <div className='flex pt-[20px] gap-[10px] mt-[10px]'>
-        <IoCheckmark className='text-purple-700 font-bold w-[30px] h-[30px] pt-[10px]'/>
-        <p className='text-[18px] pt-[10px]'>
+      <div className='flex items-start md:items-center justify-center md:justify-start pt-[20px] gap-[10px] mt-[10px] text-left'>
+        <IoCheckmark className='text-purple-700 font-bold w-[30px] h-[30px] flex-shrink-0 pt-[5px]'/>
+        <p className='text-[16px] md:text-[18px]'>
           Competitive pricing with top-tier service quality.
         </p>
       </div>
 
-     <button onClick={() => navigate("/packages")}
-  className="bg-purple-700 p-[15px_30px] text-[20px] text-white mt-[10%] rounded-[30px]">
-  Our Package
-  </button>
+      <button
+        onClick={() => navigate("/packages")}
+        className="bg-purple-700 p-[15px_30px] text-[18px] md:text-[20px] text-white mt-[10%] rounded-[30px]"
+      >
+        Our Package
+      </button>
 
     </motion.div>
 
@@ -181,8 +188,7 @@ const App = () => {
   style={{ backgroundColor: "#FF61370D" }}
   initial={{ opacity: 0, y: 80 }}
   whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8 }}
->
+  transition={{ duration: 0.8 }} className='flex-col md:flex-row'>
 
   <motion.div>
 
@@ -219,7 +225,7 @@ const App = () => {
 
   {/* FIRST ROW */}
   <motion.div
-    className='flex gap-[6px] mt-[80px]'
+    className='flex-col md:flex-row flex gap-[6px] mt-[80px]'
     initial={{ opacity: 0, y: 80 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.8, delay: 0.2 }}
@@ -259,7 +265,7 @@ const App = () => {
 
   {/* SECOND ROW */}
   <motion.div
-    className='flex gap-[6px] mt-[80px] pb-[13%]'
+    className='flex-col md:flex-row flex gap-[6px] mt-[80px] pb-[13%]'
     initial={{ opacity: 0, y: 80 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.8, delay: 0.3 }}
@@ -323,7 +329,7 @@ const App = () => {
   </div>
 
   <motion.div
-    className='flex justify-center items-center gap-[10px] mt-[80px]'
+    className='flex-col md:flex-row flex justify-center items-center gap-[10px] mt-[80px]'
     initial={{ opacity: 0, y: -80 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
@@ -356,7 +362,7 @@ const App = () => {
   </motion.div>
 
   <motion.div
-    className='flex justify-center items-center gap-[10px] mt-[80px]'
+    className='flex-col md:flex-row flex justify-center items-center gap-[10px] mt-[80px]'
     initial={{ opacity: 0, y: -80 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.9, delay: 0.3, ease: "easeOut" }}
@@ -402,8 +408,7 @@ const App = () => {
   }}
   initial={{ opacity: 0, y: -120 }}
   whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 1, ease: "easeOut" }}
->
+  transition={{ duration: 1, ease: "easeOut" }} className='flex-col md:flex-row'>
 
   <motion.p
     className='text-center pt-[12%] font-bold text-white font-bold'
@@ -438,194 +443,170 @@ const App = () => {
   </motion.div>
 
 </motion.div>
-     <motion.div
-  style={{ backgroundColor: "#FF61370D" }}
-  className="flex items-start gap-[10%] px-[20px] py-[80px]"
->
+
+  <motion.div style={{ backgroundColor: "#FF61370D" }}
+  className="flex flex-col lg:flex-row items-start gap-[40px] lg:gap-[10%] px-[20px] md:px-[40px] py-[60px] md:py-[80px]">
 
   {/* LEFT SIDE TEXT */}
   <motion.div
     initial={{ opacity: 0, x: -120 }}
     whileInView={{ opacity: 1, x: 0 }}
     transition={{ duration: 0.9, ease: "easeOut" }}
+    className="w-full lg:w-[40%] text-center lg:text-left"
   >
-    <p className="text-orange-400 pl-[20px] text-[20px] pt-[10%]">
+    <p className="text-orange-400 text-[16px] md:text-[20px] pt-[5%] lg:pt-[10%]">
       CLIENT FEEDBACK
     </p>
 
-    <p className="font-bold text-[43px] pl-[20px] pt-[10px]">
-      What do people say<br />
+    <p className="font-bold text-[30px] sm:text-[36px] md:text-[43px] pt-[10px] leading-tight">
+      What do people say
+      <br className="hidden md:block" />
       about our services?
     </p>
 
-    <p className="pl-[20px] pt-[40px]">
-      Hear from our happy travelers! See how Tranquilane<br />
-      Travels made their journeys seamless and<br />
+    <p className="pt-[25px] md:pt-[40px] text-[15px] md:text-[16px] leading-relaxed">
+      Hear from our happy travelers! See how Tranquilane
+      <br className="hidden md:block" />
+      Travels made their journeys seamless and
+      <br className="hidden md:block" />
       unforgettable.
     </p>
 
-    <button onClick={() => navigate("/testimonies")}
-  className='bg-orange-400 text-white p-[15px_50px] cursor-pointer mt-[21%] rounded-[30px] mb-[80px]'>
-  Read More
-</button>
+    <button
+      onClick={() => navigate("/testimonies")}
+      className="bg-orange-400 text-white px-[40px] py-[15px] cursor-pointer mt-[40px] lg:mt-[21%] rounded-[30px] mb-[30px] lg:mb-[80px]"
+    >
+      Read More
+    </button>
   </motion.div>
 
   {/* RIGHT SIDE SLIDER */}
   <motion.div
-    className="w-[700px]"
+    className="w-full lg:w-[700px]"
     initial={{ opacity: 0, x: 120 }}
     whileInView={{ opacity: 1, x: 0 }}
     transition={{ duration: 0.9, ease: "easeOut" }}
   >
 
-    {/* SCROLL AREA */}
     <div
       id="testimonialScroll"
-      className="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory no-scrollbar"
+      className="flex gap-4 md:gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory no-scrollbar"
     >
 
-      <div className="min-w-[320px] snap-start shadow-lg p-4 rounded-xl bg-white">
-        <p className="pt-[40px] text-purple-700 text-[20px]">
+      <div className="min-w-[260px] sm:min-w-[300px] md:min-w-[320px] snap-start shadow-lg p-4 rounded-xl bg-white">
+        <p className="pt-[20px] md:pt-[40px] text-purple-700 text-[20px]">
           ★ ★ ★ ★ ★
         </p>
 
-        <p className="pt-[10px]">
-             The customized tour was beyond my<br/>
-      expectations! Every detail was perfect, and the<br/>
-         experience was unforgettable. Thank you,<br/>
-             Tranquilane Travels! 🌍</p>
-
-        <img src={winner} className="w-[200px] pl-[60px]" />
-
-        <p className="pl-[90px] pt-[10px]">
-          Fatima . K
+        <p className="pt-[10px] text-[14px] md:text-[16px]">
+          The customized tour was beyond my expectations! Every detail was
+          perfect, and the experience was unforgettable. Thank you,
+          Tranquilane Travels! 🌍
         </p>
 
-        <p className="pl-[90px] pt-[10px]">
-          Abuja
-        </p>
+        <img src={winner} className="w-[120px] md:w-[200px] mx-auto" />
+
+        <p className="text-center pt-[10px]">Fatima . K</p>
+        <p className="text-center pt-[10px]">Abuja</p>
       </div>
 
-      <div className="min-w-[320px] snap-start shadow-lg p-4 rounded-xl bg-white">
-        <p className="pt-[40px] text-purple-700 text-[20px]">
+      <div className="min-w-[260px] sm:min-w-[300px] md:min-w-[320px] snap-start shadow-lg p-4 rounded-xl bg-white">
+        <p className="pt-[20px] md:pt-[40px] text-purple-700 text-[20px]">
           ★ ★ ★ ★ ★
         </p>
 
-        <p className="pt-[10px]">
-          Visa procurement was effortless with<br/>
-       Tranquilane Travels. They guided me through<br/>
-        every step, and I got my visa hassle-free! 🛂</p>
-
-        <img src={winner} className="w-[200px] pl-[60px]" />
-
-        <p className="pl-[90px] pt-[10px]">
-          Emeka . N
+        <p className="pt-[10px] text-[14px] md:text-[16px]">
+          Visa procurement was effortless with Tranquilane Travels. They guided
+          me through every step, and I got my visa hassle-free! 🛂
         </p>
 
-        <p className="pl-[90px] pt-[10px]">
-          Enugu
-        </p>
+        <img src={winner} className="w-[120px] md:w-[200px] mx-auto" />
+
+        <p className="text-center pt-[10px]">Emeka . N</p>
+        <p className="text-center pt-[10px]">Enugu</p>
       </div>
 
-      <div className="min-w-[320px] snap-start shadow-lg p-4 rounded-xl bg-white">
-        <p className="pt-[40px] text-purple-700 text-[20px]">
+      <div className="min-w-[260px] sm:min-w-[300px] md:min-w-[320px] snap-start shadow-lg p-4 rounded-xl bg-white">
+        <p className="pt-[20px] md:pt-[40px] text-purple-700 text-[20px]">
           ★ ★ ★ ★ ★
         </p>
 
-        <p className="pt-[10px]">
-          Their hotel booking service was excellent! I got a<br/>
-           great hotel at the best price. Will definitely use<br/>
-                           them again!</p>
-
-        <img src={winner} className="w-[200px] pl-[60px]" />
-
-        <p className="pl-[90px] pt-[10px]">
-          Yetunde . A
+        <p className="pt-[10px] text-[14px] md:text-[16px]">
+          Their hotel booking service was excellent! I got a great hotel at the
+          best price. Will definitely use them again!
         </p>
 
-        <p className="pl-[90px] pt-[10px]">
-          Port Harcourt
-        </p>
+        <img src={winner} className="w-[120px] md:w-[200px] mx-auto" />
+
+        <p className="text-center pt-[10px]">Yetunde . A</p>
+        <p className="text-center pt-[10px]">Port Harcourt</p>
       </div>
 
-      <div className="min-w-[320px] snap-start shadow-lg p-4 rounded-xl bg-white">
-        <p className="pt-[40px] text-purple-700 text-[20px]">
+      <div className="min-w-[260px] sm:min-w-[300px] md:min-w-[320px] snap-start shadow-lg p-4 rounded-xl bg-white">
+        <p className="pt-[20px] md:pt-[40px] text-purple-700 text-[20px]">
           ★ ★ ★ ★ ★
         </p>
 
-        <p className="pt-[10px]">
-          Amazing service! They helped me<br/>
-      plan my dream vacation within my budget.<br/>
-              Highly recommended</p>
-
-        <img src={winner} className="w-[200px] pl-[60px]" />
-
-        <p className="pl-[90px] pt-[10px]">
-          Gift . O
+        <p className="pt-[10px] text-[14px] md:text-[16px]">
+          Amazing service! They helped me plan my dream vacation within my
+          budget. Highly recommended.
         </p>
 
-        <p className="pl-[90px] pt-[10px]">
-          Edo
-        </p>
+        <img src={winner} className="w-[120px] md:w-[200px] mx-auto" />
+
+        <p className="text-center pt-[10px]">Gift . O</p>
+        <p className="text-center pt-[10px]">Edo</p>
       </div>
 
-      <div className="min-w-[320px] snap-start shadow-lg p-4 rounded-xl bg-white">
-        <p className="pt-[40px] text-purple-700 text-[20px]">
+      <div className="min-w-[260px] sm:min-w-[300px] md:min-w-[320px] snap-start shadow-lg p-4 rounded-xl bg-white">
+        <p className="pt-[20px] md:pt-[40px] text-purple-700 text-[20px]">
           ★ ★ ★ ★ ★
         </p>
 
-        <p className="pt-[10px]">
-          Tranquilane Travels made my flight booking<br />
-          seamless and stress-free! Their service was fast,<br />
-          reliable, and affordable. Highly recommend!✈️
+        <p className="pt-[10px] text-[14px] md:text-[16px]">
+          Tranquilane Travels made my flight booking seamless and stress-free!
+          Their service was fast, reliable, and affordable. Highly recommend!✈️
         </p>
 
-        <img src={winner} className="w-[200px] pl-[60px]" />
+        <img src={winner} className="w-[120px] md:w-[200px] mx-auto" />
 
-        <p className="pl-[90px] pt-[10px]">
-          Adebayo . O
-        </p>
-
-        <p className="pl-[90px] pt-[10px]">
-          Lagos
-        </p>
+        <p className="text-center pt-[10px]">Adebayo . O</p>
+        <p className="text-center pt-[10px]">Lagos</p>
       </div>
 
     </div>
 
     {/* DOTS */}
     <div className="flex justify-center gap-3 mt-6">
-
       <button
         onClick={() =>
-          document.getElementById("testimonialScroll").scrollLeft = 0
+          (document.getElementById("testimonialScroll").scrollLeft = 0)
         }
         className="w-3 h-3 rounded-full bg-purple-700"
       />
 
       <button
         onClick={() =>
-          document.getElementById("testimonialScroll").scrollLeft = 350
+          (document.getElementById("testimonialScroll").scrollLeft = 350)
         }
         className="w-3 h-3 rounded-full bg-purple-700"
       />
 
       <button
         onClick={() =>
-          document.getElementById("testimonialScroll").scrollLeft = 700
+          (document.getElementById("testimonialScroll").scrollLeft = 700)
         }
         className="w-3 h-3 rounded-full bg-purple-700"
       />
-
     </div>
 
   </motion.div>
 
 </motion.div>
     
-    <div>
+    <div className='flex-col md:flex-row'>
 
-        <div>
+        <div className='text-center'>
           <p className='text-center mt-[90px] text-[17px] text-purple-700'>OUR BLOGS</p>
 
           <p className='text-[50px] font-bold text-center mt-[20px]'>News and Updates</p>
@@ -635,7 +616,7 @@ const App = () => {
                        Get the best tips and offers for your next journey! ✈️🌍</p>
         </div>
 
-           <div className='flex gap-[30px]'>
+           <div className='flex-col md:flex-row flex gap-[30px]'>
 
          <div className='mt-[70px]'>
 

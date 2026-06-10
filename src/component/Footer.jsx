@@ -9,9 +9,9 @@ const Footer = () => {
     <div>
       
        
-             <footer className="bg-[#081224] text-white">
+             <footer className="flex-col md:flex-row bg-[#081224] text-white">
              {/* Main Footer */}
-             <div className="max-w-[1400px] mx-auto px-8 py-16">
+             <div className="flex-col md:flex-row max-w-[1400px] mx-auto px-8 py-16">
                <div className="grid grid-cols-1 md:grid-cols-4 gap-16">
                  {/* Logo Section */}
                  <div>
@@ -29,7 +29,7 @@ const Footer = () => {
                  </div>
        
                  {/* Quick Links */}
-                 <div>
+                 <div className='text-center justify-center'>
                    <h3 className="text-[38px] text-purple-700 font-medium mb-8">
                      Quick Links
                    </h3>
@@ -57,7 +57,7 @@ const Footer = () => {
                  </div>
        
                  {/* Services */}
-                 <div>
+                 <div className='text-center'>
                    <h3 className="text-[38px] text-purple-700 font-medium mb-8">
                      Our Services
                    </h3>
@@ -85,7 +85,7 @@ const Footer = () => {
                  </div>
        
                  {/* Office Info */}
-                 <div>
+                 <div className='text-center'>
                    <h3 className="text-[38px] text-purple-700 font-medium mb-8">
                      Office Info
                    </h3>

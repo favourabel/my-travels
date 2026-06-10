@@ -18,7 +18,7 @@ const Hotel = () => {
         <div style={{
            backgroundImage: `url(${room})`,
            backgroundSize: "cover",}}
-         className="mt-[50px]">
+         className="flex-col md:flex-row mt-[50px]">
          <motion.p
            initial={{ opacity: 0, y: -50 }}
            whileInView={{ opacity: 1, y: 0 }}
@@ -40,61 +40,91 @@ const Hotel = () => {
          </motion.p>
        </div>
        
-              <div className='flex gap-[120px]'>
-            
-                      <div>
-            
-                    <img src={room} className='w-[730px] rounded-[8px] mt-[60px] ml-[70px]'/>
-            
-                      <p className='ml-[30px] font-bold text-[40px] mt-[20px] text-purple-700'>Hotel Reservations</p>
-            
-                        <p className='ml-[30px] mt-[20px] text-[15px]'>
-                          Finding the perfect accommodation is essential for a comfortable and enjoyable trip. At Macwise<br/>
-                          Travels & Tours, we offer seamless hotel reservation services, ensuring you get the best options at<br/>
-                          competitive rates. Whether you’re looking for luxurious resorts, budget-friendly stays, or business<br/>
-                          hotels, we cater to all travel needs with a vast network of trusted partners worldwide.</p>     
+            <div className="flex flex-col lg:flex-row gap-[40px] lg:gap-[120px]">
 
-                            <p className='ml-[30px] mt-[30px] text-[15px]'>
-                         With our expert recommendations and exclusive deals, you save time and money while enjoying top-<br/>
-                         rated accommodations. We handle all the details, from booking confirmations to special requests<br/>
-                         giving you a hassle-free experience. Our commitment to customer satisfaction, reliability, and<br/>
-                         convenience makes us the best choice for your hotel reservations.</p>
+  <div>
 
-                         <p className='mt-[30px] ml-[30px] text-[15px]'>
-                           Let us take the stress out of finding the right place to stay. Book with Macwise Travels & Tours<br/>
-                           today and enjoy a smooth, worry-free experience. Fill out our consultation form below, and let us<br/>
-                           secure the perfect hotel for your next trip! 🏨✨</p>
-                       </div> 
-            
-                    <div className='mt-[60px]'>
-                         
-                  <form style={{backgroundColor : "#FF61370D"}} className=' h-[650px] rounded-[8px] p-[50px] mr-[150px]'>
-       
-                       <p className='pl-[40px] pt-[20px] text-[30px] font-bold'>Contact Us</p>
-            
-                        <div className='flex gap-[10px] pt-[20px] pl-[40px]'>
-                            <CiLocationOn className='w-[20px] h-[20px] text-orange-400 mt-[10px]'/>
-                            <p>
-                                Block A, Shop 1, 3rd Avenue<br/>
-                              Cornershop, Gwarimpa, Abuja, Nigeria</p>
-                        </div>
-            
-                        <div className='flex gap-[10px] pt-[20px] pl-[40px]'>
-                            <MdOutlineEmail className='w-[20px] h-[20px] text-orange-400'/>
-                            <p className='cursor-pointer'>Macwiseltd@gmail.com</p>
-                        </div>
-            
-                         <div className='flex gap-[10px] pl-[40px] pt-[20px]'>
-                            <FaPhoneAlt className='w-[20px] h-[20px] text-orange-400'/>
-                            <p>+2349130593550</p>
-                         </div>
-            
-                       <img src= {lady} className='w-[300px] rounded-[7px] mt-[40px] ml-[10px] mb-[70px]'/>
-             
-                     </form>
-                    </div>
-            
-                   </div>
+    <img
+      src={room}
+      className="w-full lg:w-[730px] rounded-[8px] mt-[60px] px-[20px] lg:px-0 lg:ml-[70px]"
+    />
+
+    <p className="ml-[20px] lg:ml-[30px] font-bold text-[28px] md:text-[35px] lg:text-[40px] mt-[20px] text-purple-700">
+      Hotel Reservations
+    </p>
+
+    <p className="ml-[20px] lg:ml-[30px] mt-[20px] text-[14px] md:text-[15px] pr-[20px]">
+      Finding the perfect accommodation is essential for a comfortable and enjoyable trip. At Macwise
+      <br className="hidden lg:block" />
+      Travels & Tours, we offer seamless hotel reservation services, ensuring you get the best options at
+      <br className="hidden lg:block" />
+      competitive rates. Whether you’re looking for luxurious resorts, budget-friendly stays, or business
+      <br className="hidden lg:block" />
+      hotels, we cater to all travel needs with a vast network of trusted partners worldwide.
+    </p>
+
+    <p className="ml-[20px] lg:ml-[30px] mt-[30px] text-[14px] md:text-[15px] pr-[20px]">
+      With our expert recommendations and exclusive deals, you save time and money while enjoying top-
+      <br className="hidden lg:block" />
+      rated accommodations. We handle all the details, from booking confirmations to special requests
+      <br className="hidden lg:block" />
+      giving you a hassle-free experience. Our commitment to customer satisfaction, reliability, and
+      <br className="hidden lg:block" />
+      convenience makes us the best choice for your hotel reservations.
+    </p>
+
+    <p className="mt-[30px] ml-[20px] lg:ml-[30px] pr-[20px] text-[14px] md:text-[15px]">
+      Let us take the stress out of finding the right place to stay. Book with Macwise Travels & Tours
+      <br className="hidden lg:block" />
+      today and enjoy a smooth, worry-free experience. Fill out our consultation form below, and let us
+      <br className="hidden lg:block" />
+      secure the perfect hotel for your next trip! 🏨✨
+    </p>
+
+  </div>
+
+  <div className="mt-[60px] px-[20px] lg:px-0">
+
+    <form
+      style={{ backgroundColor: "#FF61370D" }}
+      className="w-full lg:w-auto min-h-[650px] rounded-[8px] p-[30px] md:p-[50px] lg:mr-[150px]"
+    >
+
+      <p className="pl-[10px] md:pl-[40px] pt-[20px] text-[24px] md:text-[30px] font-bold">
+        Contact Us
+      </p>
+
+      <div className="flex gap-[10px] pt-[20px] pl-[10px] md:pl-[40px]">
+        <CiLocationOn className="w-[20px] h-[20px] text-orange-400 mt-[10px] flex-shrink-0" />
+        <p>
+          Block A, Shop 1, 3rd Avenue
+          <br />
+          Cornershop, Gwarimpa, Abuja, Nigeria
+        </p>
+      </div>
+
+      <div className="flex gap-[10px] pt-[20px] pl-[10px] md:pl-[40px]">
+        <MdOutlineEmail className="w-[20px] h-[20px] text-orange-400 flex-shrink-0" />
+        <p className="cursor-pointer break-all">
+          Macwiseltd@gmail.com
+        </p>
+      </div>
+
+      <div className="flex gap-[10px] pl-[10px] md:pl-[40px] pt-[20px]">
+        <FaPhoneAlt className="w-[20px] h-[20px] text-orange-400 flex-shrink-0" />
+        <p>+2349130593550</p>
+      </div>
+
+      <img
+        src={lady}
+        className="w-full max-w-[300px] rounded-[7px] mt-[40px] mx-auto mb-[70px]"
+      />
+
+    </form>
+
+  </div>
+
+</div>
                
                   
                   <div className=" min-h-screen flex px-4 py-10 mt-[40px] ml-[30px] mb-[70px]">

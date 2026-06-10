@@ -18,7 +18,7 @@ const Travel = () => {
          <div style={{
                  backgroundImage: `url(${policy})`,
                  backgroundSize: "cover",}}
-               className="mt-[50px]">
+               className="flex-col md:flex-row mt-[50px]">
                <motion.p
                  initial={{ opacity: 0, y: -50 }}
                  whileInView={{ opacity: 1, y: 0 }}
@@ -40,63 +40,93 @@ const Travel = () => {
                </motion.p>
              </div>
              
-                    <div className='flex gap-[120px]'>
-                  
-                            <div>
-                  
-                          <img src={policy} className='w-[730px] rounded-[8px] mt-[60px] ml-[70px]'/>
-                  
-                            <p className='ml-[30px] font-bold text-[40px] mt-[20px] text-purple-700'>Travel Insurance</p>
-                  
-                              <p className='ml-[30px] mt-[20px] text-[15px]'>
-                             Unexpected events can disrupt even the best-planned trips, but with Macwise Travels & Tours,<br/>
-                             you can travel worry-free. Our comprehensive travel insurance covers medical emergencies, trip<br/>
-                             cancellations, lost baggage, and other unforeseen circumstances, ensuring you’re protected no<br/>
-                             matter where you go. Whether you’re traveling for business or leisure, our insurance solutions<br/>
-                               provide the security you need.</p>
-                                  
-                                  <p className='ml-[30px] mt-[30px] text-[15px]'>
-                               Why choose us? We partner with trusted insurance providers to offer flexible coverage tailored to<br/>
-                               your specific needs. Our expert team guides you through selecting the best plan, ensuring you<br/>
-                               receive affordable, reliable, and hassle-free coverage. With us, you get peace of mind knowing you<br/>
-                               safeguarded against travel uncertainties.</p>
-             
-                               <p className='mt-[30px] ml-[30px] text-[15px]'>
-                                 Let us handle your travel protection while you focus on making memories! We guarantee a seamless<br/>
-                                 experience from consultation to policy issuance. Fill out our consultation form below, and let secure<br/>
-                                 your journey today! 🛡️✈️</p>
-                             </div> 
-                  
-                          <div className='mt-[60px]'>
-                               
-                        <form style={{backgroundColor : "#FF61370D"}} className=' h-[650px] rounded-[8px] p-[50px] mr-[150px]'>
-             
-                             <p className='pl-[40px] pt-[20px] text-[30px] font-bold'>Contact Us</p>
-                  
-                              <div className='flex gap-[10px] pt-[20px] pl-[40px]'>
-                                  <CiLocationOn className='w-[20px] h-[20px] text-orange-400 mt-[10px]'/>
-                                  <p>
-                                      Block A, Shop 1, 3rd Avenue<br/>
-                                    Cornershop, Gwarimpa, Abuja, Nigeria</p>
-                              </div>
-                  
-                              <div className='flex gap-[10px] pt-[20px] pl-[40px]'>
-                                  <MdOutlineEmail className='w-[20px] h-[20px] text-orange-400'/>
-                                  <p className='cursor-pointer'>Macwiseltd@gmail.com</p>
-                              </div>
-                  
-                               <div className='flex gap-[10px] pl-[40px] pt-[20px]'>
-                                  <FaPhoneAlt className='w-[20px] h-[20px] text-orange-400'/>
-                                  <p>+2349130593550</p>
-                               </div>
-                  
-                             <img src= {lady} className='w-[300px] rounded-[7px] mt-[40px] ml-[10px] mb-[70px]'/>
-                   
-                           </form>
-                          </div>
-                  
-                         </div>
-                     
+                 <div className="flex flex-col lg:flex-row gap-[40px] lg:gap-[120px]">
+
+  <div>
+
+    <img
+      src={policy}
+      className="w-full lg:w-[730px] rounded-[8px] mt-[60px] px-[20px] lg:px-0 lg:ml-[70px]"
+    />
+
+    <p className="ml-[20px] lg:ml-[30px] font-bold text-[28px] md:text-[35px] lg:text-[40px] mt-[20px] text-purple-700">
+      Travel Insurance
+    </p>
+
+    <p className="ml-[20px] lg:ml-[30px] mt-[20px] text-[14px] md:text-[15px] pr-[20px]">
+      Unexpected events can disrupt even the best-planned trips, but with Macwise Travels & Tours,
+      <br className="hidden lg:block" />
+      you can travel worry-free. Our comprehensive travel insurance covers medical emergencies, trip
+      <br className="hidden lg:block" />
+      cancellations, lost baggage, and other unforeseen circumstances, ensuring you’re protected no
+      <br className="hidden lg:block" />
+      matter where you go. Whether you’re traveling for business or leisure, our insurance solutions
+      <br className="hidden lg:block" />
+      provide the security you need.
+    </p>
+
+    <p className="ml-[20px] lg:ml-[30px] mt-[30px] text-[14px] md:text-[15px] pr-[20px]">
+      Why choose us? We partner with trusted insurance providers to offer flexible coverage tailored to
+      <br className="hidden lg:block" />
+      your specific needs. Our expert team guides you through selecting the best plan, ensuring you
+      <br className="hidden lg:block" />
+      receive affordable, reliable, and hassle-free coverage. With us, you get peace of mind knowing you
+      <br className="hidden lg:block" />
+      safeguarded against travel uncertainties.
+    </p>
+
+    <p className="mt-[30px] ml-[20px] lg:ml-[30px] pr-[20px] text-[14px] md:text-[15px]">
+      Let us handle your travel protection while you focus on making memories! We guarantee a seamless
+      <br className="hidden lg:block" />
+      experience from consultation to policy issuance. Fill out our consultation form below, and let secure
+      <br className="hidden lg:block" />
+      your journey today! 🛡️✈️
+    </p>
+
+  </div>
+
+  <div className="mt-[60px] px-[20px] lg:px-0">
+
+    <form
+      style={{ backgroundColor: "#FF61370D" }}
+      className="w-full lg:w-auto min-h-[650px] rounded-[8px] p-[30px] md:p-[50px] lg:mr-[150px]"
+    >
+
+      <p className="pl-[10px] md:pl-[40px] pt-[20px] text-[24px] md:text-[30px] font-bold">
+        Contact Us
+      </p>
+
+      <div className="flex gap-[10px] pt-[20px] pl-[10px] md:pl-[40px]">
+        <CiLocationOn className="w-[20px] h-[20px] text-orange-400 mt-[10px] flex-shrink-0" />
+        <p>
+          Block A, Shop 1, 3rd Avenue
+          <br />
+          Cornershop, Gwarimpa, Abuja, Nigeria
+        </p>
+      </div>
+
+      <div className="flex gap-[10px] pt-[20px] pl-[10px] md:pl-[40px]">
+        <MdOutlineEmail className="w-[20px] h-[20px] text-orange-400 flex-shrink-0" />
+        <p className="cursor-pointer break-all">
+          Macwiseltd@gmail.com
+        </p>
+      </div>
+
+      <div className="flex gap-[10px] pl-[10px] md:pl-[40px] pt-[20px]">
+        <FaPhoneAlt className="w-[20px] h-[20px] text-orange-400 flex-shrink-0" />
+        <p>+2349130593550</p>
+      </div>
+
+      <img
+        src={lady}
+        className="w-full max-w-[300px] rounded-[7px] mt-[40px] mx-auto mb-[70px]"
+      />
+
+    </form>
+
+  </div>
+
+</div>
                         
                         <div className=" min-h-screen flex px-4 py-10 mt-[40px] ml-[30px] mb-[70px]">
                <div className="bg-[#ff6238] w-full max-w-[750px] p-5 sm:p-6 md:p-8">
