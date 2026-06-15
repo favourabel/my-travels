@@ -603,7 +603,6 @@ const App = () => {
   </motion.div>
 
 </motion.div>
-    
     <div className='flex-col md:flex-row'>
 
         <div className='text-center'>
